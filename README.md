@@ -1,11 +1,11 @@
 ## 1. Install Node.js
 
-(nodejs.org/en/download)
+[nodejs.org/en/download]
 
 ## 2. Install Angular CLI
 
 `npm install -g @angular/cli`
 
-## 3. launch app
+## 3. Launch App
 
 `ng serve -o`
