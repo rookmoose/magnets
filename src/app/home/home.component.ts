@@ -11,9 +11,6 @@ export class HomeComponent {
   otherNumbers: number[] = [];
 
   constructor() { 
-
-    //I'm testing this shizz
-
     for(let i = 0; i < 10; i++){
       this.numbers.push(i);
     }
