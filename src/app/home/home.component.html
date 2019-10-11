@@ -1,18 +1,24 @@
 <div style="display: flex;">
     <div class="list-container">
-        <div #firstList="cdkDropList" cdkDropList [cdkDropListData]="numbers" [cdkDropListConnectedTo]="secondList" class="list" (cdkDropListDropped)="drop($event)">
-            <div cdkDrag class="entry" *ngFor="let number of numbers">
+        <div #firstList="cdkDropList" cdkDropList [cdkDropListData]="original" [cdkDropListConnectedTo]="secondList"
+            class="list" (cdkDropListDropped)="drop($event)">
+            <div cdkDrag class="entry" *ngFor="let line of original">
                 <div class="entry-placeholder" *cdkDragPlaceholder></div>
-                {{number}}
+                {{line}}
             </div>
         </div>
     </div>
     <div class="list-container">
-        <div #secondList="cdkDropList" cdkDropList [cdkDropListData]="otherNumbers" [cdkDropListConnectedTo]="firstList" class="list" (cdkDropListDropped)="drop($event)">
-            <div cdkDrag class="entry" *ngFor="let number of otherNumbers">
+        <div #secondList="cdkDropList" cdkDropList [cdkDropListData]="solution" [cdkDropListConnectedTo]="firstList"
+            class="list" (cdkDropListDropped)="drop($event)">
+            <div cdkDrag class="entry" *ngFor="let line of solution">
                 <div class="entry-placeholder" *cdkDragPlaceholder></div>
-                {{number}}
+                {{line}}
             </div>
         </div>
     </div>
+</div>
+<div *ngIf="getSecondListPopulated()">
+    <span *ngIf="checkSolution()">Correct!</span>
+    <span *ngIf="!checkSolution()">Incorrect.</span>
 </div>
