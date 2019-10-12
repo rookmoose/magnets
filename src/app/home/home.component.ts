@@ -10,6 +10,7 @@ export class HomeComponent {
   original: number[] = [];
   expected: number[] = [];
   solution: number[] = [];
+  notDragging: boolean = true;
 
   constructor() { 
     for(var i = 0; i < 5; i++){
