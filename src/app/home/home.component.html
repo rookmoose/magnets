@@ -3,7 +3,6 @@
         <div #firstList="cdkDropList" cdkDropList [cdkDropListData]="original" [cdkDropListConnectedTo]="secondList"
             class="list" (cdkDropListDropped)="drop($event)">
             <div cdkDrag class="entry" *ngFor="let line of original">
-                <div class="entry-placeholder" *cdkDragPlaceholder></div>
                 {{line}}
             </div>
         </div>
@@ -12,12 +11,10 @@
         <div #secondList="cdkDropList" cdkDropList [cdkDropListData]="solution" [cdkDropListConnectedTo]="firstList"
             class="list" (cdkDropListDropped)="drop($event)">
             <div cdkDrag class="entry" *ngFor="let line of solution">
-                <div class="entry-placeholder" *cdkDragPlaceholder></div>
                 {{line}}
             </div>
         </div>
     </div>
-
 </div>
 <div class="footer" *ngIf="getSecondListPopulated()">
     <span *ngIf="checkSolution()">Correct!</span>

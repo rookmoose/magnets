@@ -1,22 +1,52 @@
+.card-container {
+    display: block;
+    background-color: black;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 15px;
+}
+
+.list-container {
+    vertical-align: top;
+    display: inline-block;
+    max-width: 100%;
+    width: 40%;
+    min-height: 100px;
+}
+
+.list {
+    background: black;
+    border-radius: 4px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
 .entry {
     padding: 20px 10px;
-    color: rgba(0, 0, 0, 0.87);
-    cursor: move;
+    color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    background: #fff;
-    border-radius: 4px;
+    justify-content: space-between;
     box-sizing: border-box;
-    position: relative;
-    z-index: 1;
+    cursor: move;
+    background: black;
+    font-size: 14 px;
     transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
 }
 
+hr {
+    color: white;
+    translate: rotate(90deg);
+    background-color: white;
+    width: 5px;
+    display: inline-flex;
+}
+
 .entry-placeholder {
-    background: #ccc;
+    background: black;
     border: dotted 3px #999;
     min-height: 60px;
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
@@ -24,22 +54,6 @@
 
 .entry:last-child {
     border: none;
-}
-
-.list-container {
-    width: 50%;
-    max-width: 100%;
-    margin: 0 50px 50px 0;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.list {
-    min-height: 60px;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    display: block;
 }
 
 .cdk-drag-preview {
@@ -55,12 +69,7 @@
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
-  }
-  
 .footer {
     position: relative;
 }
+
