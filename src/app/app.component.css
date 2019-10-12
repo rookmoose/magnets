@@ -1,4 +1,14 @@
 .toolbar {
-    background-color: blanchedalmond;
-    margin: 14px;
+    height: 60px;
+    padding: 0px 0px 0px 30px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 450;
 }
+
+.content {
+    margin: 32px auto;
+    padding: 0 16px;
+  }
